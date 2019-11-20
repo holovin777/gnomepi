@@ -156,5 +156,7 @@ su
 systemctl enable gdm.service
 passwd
 passwd user
+pacman -Rs gnome-software gnome-music
+pacman -S ntfs-3g android-file-transfer
 pacman -S chromium vlc libreoffice-fresh gimp git
 ```
