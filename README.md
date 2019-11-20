@@ -1,5 +1,5 @@
-# wmini
-## Custom installation guide Arch Linux with SSD
+# Wmini
+## Installation guide Arch Linux with HDD/SSD
 ```bash
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-4-latest.tar.gz
 lsblk -l
@@ -152,7 +152,9 @@ main = xmonad def
 ---
 ```bash
 xmonad --recompile
-exit
+su
 systemctl enable gdm.service
+passwd
+passwd user
 pacman -S chromium vlc libreoffice-fresh gimp git
 ```
