@@ -1,5 +1,5 @@
-# Wmini
-## Installation guide Arch Linux with HDD/SSD
+# Wosmini
+## Installation guide Arch Linux ARM with HDD/SSD
 ```bash
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-4-latest.tar.gz
 lsblk -l
