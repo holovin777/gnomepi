@@ -70,7 +70,9 @@ sudo vim boot/config.txt
 ```
 #
 ```python
+...
 device_tree_param=audio=on
+disable_overscan=1
 ```
 ---
 ```bash
