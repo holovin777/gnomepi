@@ -73,6 +73,7 @@ sudo vim boot/config.txt
 ...
 device_tree_param=audio=on
 disable_overscan=1
+disable_audio_dither=1
 ```
 ---
 ```bash
@@ -160,5 +161,5 @@ passwd
 passwd user
 pacman -Rs gnome-software gnome-music
 pacman -S ntfs-3g android-file-transfer
-pacman -S chromium vlc libreoffice-fresh gimp git
+pacman -S chromium vlc libreoffice-fresh gimp git clipgrap
 ```
