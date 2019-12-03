@@ -123,7 +123,7 @@ pacman -Syu
 useradd -m -G users -s /bin/bash user
 passwd user
 userdel -r alarm
-pacman -S gnome gnome-flashback gnome-keyring gnome-tweaks gnome-applets xf-video-fbdev xorg-server xorg-xinit gvim network-manager-applet ttf-dejavu ttf-droid xmonad xmonad-contribi dmenu
+pacman -S gnome gnome-flashback gnome-keyring gnome-tweaks gnome-applets xf-video-fbdev xorg-server xorg-xinit gvim network-manager-applet ttf-dejavu ttf-droid xmonad xmonad-contribi dmenu base-devel
 systemctl enable NetworkManager.service
 systemctl start gdm.service
 ```
@@ -162,4 +162,10 @@ passwd user
 pacman -Rs gnome-software gnome-music
 pacman -S ntfs-3g android-file-transfer
 pacman -S chromium vlc libreoffice-fresh gimp git clipgrap
+cd Downloads
+git clone https://aur.archlinux.org/bluez-utils-compat.git
+cd bluez-utils-compat
+gpg --recv-keys XXXXXXXXXXXXXXXX
+makepkg -sci
+
 ```
