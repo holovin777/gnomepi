@@ -167,5 +167,7 @@ git clone https://aur.archlinux.org/bluez-utils-compat.git
 cd bluez-utils-compat
 gpg --recv-keys XXXXXXXXXXXXXXXX
 makepkg -sci
-
+git clone https://aur.archlinux.org/pi-bluetooth.git
+cd pi-bluetooth
+makepkg -sci
 ```
