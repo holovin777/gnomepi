@@ -2,7 +2,7 @@
 ## Installation guide Arch Linux ARM with HDD/SSD
 ```bash
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-4-latest.tar.gz
-lsblk -l
+sudo fdisk -l
 sudo umount /dev/sdX1 /dev/sdX2 ...
 sudo fdisk /dev/sdX
 ```
