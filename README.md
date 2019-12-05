@@ -41,9 +41,9 @@ sudo mount /dev/sdX1 wmini/boot
 sudo mount /dev/sdS2 wmini/home
 sudo bsdtar -xpf ArchLinuxARM-rpi-4-latest.tar.gz -C wmini
 sudo sync
-sudo blkid | grep sdb
-/dev/sdb1: UUID="e32e2726-803a-4bd0-a1de-9b935dbb2246" TYPE="ext4" PARTUUID="5572f842-01"
-/dev/sdb2: UUID="8099802f-f372-4ede-b147-edb7ffa7b9ed" TYPE="ext4" PARTUUID="5572f842-02"
+sudo blkid | grep sdS
+/dev/sdS1: UUID="e32e2726-803a-4bd0-a1de-9b935dbb2246" TYPE="ext4" PARTUUID="5572f842-01"
+/dev/sdS2: UUID="8099802f-f372-4ede-b147-edb7ffa7b9ed" TYPE="ext4" PARTUUID="5572f842-02"
 cd wmini
 sudo vim boot/cmdline.txt
 ```
