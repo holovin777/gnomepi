@@ -44,8 +44,7 @@ sudo sync
 sudo blkid | grep sdS
 /dev/sdS1: UUID="e32e2726-803a-4bd0-a1de-9b935dbb2246" TYPE="ext4" PARTUUID="5572f842-01"
 /dev/sdS2: UUID="8099802f-f372-4ede-b147-edb7ffa7b9ed" TYPE="ext4" PARTUUID="5572f842-02"
-cd wmini
-sudo vim boot/cmdline.txt
+sudo vim wmini/boot/cmdline.txt
 ```
 #
 ```python
@@ -55,7 +54,7 @@ root=PARTUUID=5572f842-01 rw rootwait console=ttyAMA0,115200 console=tty1 selinu
 ```bash
 sudo blkid | grep sdX
 /dev/sdX1: SEC_TYPE="msdos" UUID="600E-E4D5" TYPE="vfat" PARTUUID="8224ec18-01"
-sudo vim etc/fstab
+sudo vim wmini/etc/fstab
 ```
 #
 ```python
@@ -65,8 +64,8 @@ PARTUUID=5572f842-02    /home    ext4    defaults,discard    0    2
 ```
 ---
 ```bash
-sudo cp etc/fstab boot/fstab_usb
-sudo vim boot/config.txt
+sudo cp wmini/etc/fstab boot/fstab_usb
+sudo vim wmini/boot/config.txt
 ```
 #
 ```python
@@ -77,7 +76,7 @@ disable_audio_dither=1
 ```
 ---
 ```bash
-sudo vim etc/hostname
+sudo vim wmini/etc/hostname
 ```
 #
 ```python
@@ -85,7 +84,7 @@ wmini
 ```
 ---
 ```bash
-sudo vim etc/hosts
+sudo vim wmini/etc/hosts
 ```
 #
 ```python
@@ -95,7 +94,7 @@ sudo vim etc/hosts
 ```
 ---
 ```bash
-sudo vim etc/locale.gen
+sudo vim wmini/etc/locale.gen
 ```
 #
 ```python
@@ -103,7 +102,7 @@ en_US.UTF-8 UTF-8
 ```
 ---
 ```bash
-sudo vim etc/locale.conf
+sudo vim wmini/etc/locale.conf
 ```
 #
 ```python
@@ -111,7 +110,6 @@ LANG=en_US.UTF-8
 ```
 ---
 ```bash
-cd
 sudo umount wmini/boot wmini/home wmini
 ```
 Insert cards into the Wmini ad login with root/root
