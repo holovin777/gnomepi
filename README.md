@@ -134,7 +134,7 @@ su
 systemctl enable gdm.service
 pacman -Rs gnome-software gnome-music totem
 pacman -S ntfs-3g android-file-transfer
-pacman -S chromium vlc libreoffice-fresh gimp git clipgrap
+pacman -S chromium vlc libreoffice-fresh gimp git clipgrab
 cd Downloads
 git clone https://aur.archlinux.org/bluez-utils-compat.git
 cd bluez-utils-compat
