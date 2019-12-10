@@ -124,6 +124,7 @@ passwd user
 userdel -r alarm
 pacman -S gnome gnome-flashback gnome-keyring gnome-tweaks gnome-applets xf86-video-fbdev xorg-server xorg-xinit gvim network-manager-applet dnsmasq ttf-dejavu ttf-droid xmonad xmonad-contribi dmenu base-devel
 systemctl enable NetworkManager.service
+reboot
 systemctl start gdm.service
 ```
 Login with user/user
