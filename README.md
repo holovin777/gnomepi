@@ -118,14 +118,33 @@ locale-gen
 pacman-key --init
 pacman-key --populate archlinuxarm
 pacman -Syu
+passwd
 useradd -m -G users -s /bin/bash user
 passwd user
 userdel -r alarm
-pacman -S gnome gnome-flashback gnome-keyring gnome-tweaks gnome-applets xf-video-fbdev xorg-server xorg-xinit gvim network-manager-applet ttf-dejavu ttf-droid xmonad xmonad-contribi dmenu base-devel
+pacman -S gnome gnome-flashback gnome-keyring gnome-tweaks gnome-applets xf86-video-fbdev xorg-server xorg-xinit gvim network-manager-applet dnsmasq ttf-dejavu ttf-droid xmonad xmonad-contribi dmenu base-devel
 systemctl enable NetworkManager.service
 systemctl start gdm.service
 ```
 Login with user/user
+
+```bash
+su
+systemctl enable gdm.service
+pacman -Rs gnome-software gnome-music totem
+pacman -S ntfs-3g android-file-transfer
+pacman -S chromium vlc libreoffice-fresh gimp git clipgrap
+cd Downloads
+git clone https://aur.archlinux.org/bluez-utils-compat.git
+cd bluez-utils-compat
+gpg --recv-keys XXXXXXXXXXXXXXXX
+makepkg -sci
+git clone https://aur.archlinux.org/pi-bluetooth.git
+cd pi-bluetooth
+makepkg -sci
+exit
+```
+## Xmonad
 ```bash
 cp /etc/X11/xinit/xinitrc ~/.xinitrc
 vim ~/.xinitrc
@@ -153,19 +172,4 @@ main = xmonad def
 ---
 ```bash
 xmonad --recompile
-su
-systemctl enable gdm.service
-passwd
-passwd user
-pacman -Rs gnome-software gnome-music
-pacman -S ntfs-3g android-file-transfer
-pacman -S chromium vlc libreoffice-fresh gimp git clipgrap
-cd Downloads
-git clone https://aur.archlinux.org/bluez-utils-compat.git
-cd bluez-utils-compat
-gpg --recv-keys XXXXXXXXXXXXXXXX
-makepkg -sci
-git clone https://aur.archlinux.org/pi-bluetooth.git
-cd pi-bluetooth
-makepkg -sci
 ```
