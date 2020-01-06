@@ -1,4 +1,4 @@
-# Wosmini
+# GnomePi
 ## Installation guide Arch Linux ARM with HDD/SSD
 ```bash
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-4-latest.tar.gz
